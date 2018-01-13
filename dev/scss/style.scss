@@ -26,7 +26,103 @@
 	float: right;
 }
 .section{
-	margin-bottom: 40px;
-}
+	margin-bottom: 110px;
+	&__title{
+		text-align: center;
+		margin-bottom: 45px;
 		
+	}
+	&__subtitle{
+		text-align: center
+	}
+}
+
+.btn{
+	display: inline-block;
+	padding: 15px 25px;
+	color: white;
+	text-align: center;
+	background-color: #ba1723;
+}
+
+.hide{
+	display: none;
+	&-tablet{
+		@include  breakpoint(tablet){
+			display: none;
+		}
+	}
+	@include  breakpoint(tablet){
+		display: block;
+	}
+	
+}
+
+.footer{
+	background-color: #000100;
+	color: white;
+	padding: 100px 0 225px 0;
+	text-align: center;
+	::-webkit-input-placeholder {color:white;}
+	::-moz-placeholder          {color:white;}/* Firefox 19+ */
+	:-moz-placeholder           {color:white;}/* Firefox 18- */
+	:-ms-input-placeholder      {color:white;}
+
+	&__order-call{
+		input{
+			width: 100%;
+			max-width: 505px;
+			font-size: 18px;
+			margin-top: 20px;
+			background-color: #000100;
+			color: white;
+			padding: 10px 0;
+			border: none;
+			outline: none;
+			border-bottom: 2px solid white;
+			&.btn{
+				display: block;
+				margin: 45px auto ;
+				padding: 15px 25px;
+				color: white;
+				text-align: center;
+				background-color: #ba1723;
+				width: auto;
+				border: none;
+				@include  breakpoint(tablet){
+					margin: 45px 0;
+				}
+			}
+			
+		}
+			
+		@include  breakpoint(tablet){
+			text-align: left;
+		}
+		
+	}
+	&__list{
+		padding: 20px 0;
+		@include  breakpoint(phablet){
+			text-align: left;
+		}
+		.title{
+			font-size: 20px;
+			margin-bottom: 25px;
+		}
+	}
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
+		
+	li{
+		margin-bottom: 15px;
+		list-style: none;
+		&.hidden{
+			visibility: hidden;
+		}
+	}
+	
+}
 
