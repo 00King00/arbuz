@@ -36,7 +36,24 @@
 		text-align: center
 	}
 }
-
+.news__text{
+	max-height: 20vw;
+	.readmore{
+		display: block;
+		&:before{
+			content: 'Читати більше'
+		}
+	}
+	&.full-story {
+		max-height: initial;
+		.readmore{
+			&:before{
+				content: 'Згорнути'
+			}
+		}
+	}
+	
+}
 .btn{
 	display: inline-block;
 	padding: 15px 25px;
