@@ -1,68 +1,73 @@
 $(function(){
-	
-	var $dot = $('.news__text').dotdotdot({
+	var $dot_1 = $('#news_1').dotdotdot({
+		ellipsis: "\u2026 ",
+		keep: '.readmore',
+		callback: function( isTruncated ) {
+			var self =$(this)
+			if (isTruncated) {
+			}else {
+				self.find(".readmore").css("display","none");
+			}
 
-	ellipsis: "\u2026 ",
-	keep: '.readmore',
-	callback: function( isTruncated ) {
-		var self = $( this );
-		 if (isTruncated) {
-		
-
-		} else {
-			self.find(".readmore").css("display","none");
 		}
+	});
+	var $dot_2 = $('#news_2').dotdotdot({
+		ellipsis: "\u2026 ",
+		keep: '.readmore',
+		callback: function( isTruncated ) {
+			var self =$(this)
+			if (isTruncated) {
+			}else {
+				self.find(".readmore").css("display","none");
+			}
 
-	}
-        
-     
-	})
-	var api = $dot.data("dotdotdot");
-	$dot.on('click', '.readmore', function( e ){
+		}
+	});
+	var api_1 = $dot_1.data("dotdotdot");
+	var api_2 = $dot_2.data("dotdotdot");
+	
+	
+	
+	
+	$dot_1.on('click', '.readmore', function( e ){
 			e.preventDefault();
+		
 			//	When truncated, restore
-			if ( $dot.hasClass( 'ddd-truncated' ) )
+			if ( $dot_1.hasClass( 'ddd-truncated' ) )
 			{
-				api.restore();
-				$dot.addClass( 'full-story' );
+				api_1.restore();
+				$dot_1.addClass( 'full-story' );
 			}
 			//	Not truncated, truncate
 			else
 			{
-				$dot.removeClass( 'full-story' );
-				api.truncate();
-				api.watch();
+				$dot_1.removeClass( 'full-story' );
+				api_1.truncate();
+				api_1.watch();
 			}
-		}
-	);
-			
-		
+		});
+	$dot_2.on('click', '.readmore', function( e ){
+			e.preventDefault();
+			console.dir(this);
+			//	When truncated, restore
+			if ( $dot_2.hasClass( 'ddd-truncated' ) )
+			{
+				api_2.restore();
+				$dot_2.addClass( 'full-story' );
+			}
+			//	Not truncated, truncate
+			else
+			{
+				$dot_2.removeClass( 'full-story' );
+				api_2.truncate();
+				api_2.watch();
+			}
+		});
+	
+	
+	
 
 	
-	function toggleRead(caller) {
-    var callerText = $(caller).text();
-    var parent = $(caller).closest(".news__text");
-		console.log(parent)
-    var isTruncated = $(parent).hasClass("ddd-truncated");
-		console.log(isTruncated)
-		if (isTruncated){
-			
-			$(parent).find("a").text("&laquo; Read less");
-			API.restore(function(){
-				$(parent).find("a").text("&laquo; Read less")
-			});
-			
-        // Re-add click function since I guess destroy also removes this
-//			$(parent).find("a").click(function () {
-//				toggleRead(this);
-//			});
-		}else{
-			$(parent).find("a").html("Read more &raquo;");
-			
-		}
-    
-        
-    }
 
 	
 	
