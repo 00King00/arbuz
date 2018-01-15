@@ -34,8 +34,8 @@
 		margin-bottom: 45px;
 		font-size: 50px;
 		position: relative;
-	
-		&:before,&:after{
+		@media (min-width:400px){
+			&:before,&:after{
 			content: "";
 			display: inline-block;
 			height: 2px;
@@ -43,13 +43,15 @@
 			background-color: black;
 			position: absolute;
 			top:50%;
+			}
+			&:after{
+				right: -50px;
+			}
+			&:before{
+				left: -50px;
+			}
 		}
-		&:after{
-			right: -50px;
-		}
-		&:before{
-			left: -50px;
-		}
+		
 		@include breakpoint(mobileonly){
 			font-size: 30px;
 		}
@@ -61,6 +63,36 @@
 	}
 }
 
+[class^='contacts__']{
+	span{
+		font-size: 19px;
+		&:first-child{
+			font-size: 30px;
+		}
+	}
+	@include breakpoint(mobileonly){
+		span{
+			font-size: 12px;
+			margin-right: 10px;
+			&:first-child{
+				font-size: 20px;
+			}
+		}
+	}
+}
+.contacts__{
+	&phone{
+		position: relative;
+		&:before{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			background-image: url(/images/phone.png)
+		}
+	}
+}
 .news{
 	font-size: 12px;
 	margin-bottom: 15px;
