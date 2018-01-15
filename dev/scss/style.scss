@@ -30,33 +30,20 @@
 	&__title{
 		text-align: center;
 		margin-bottom: 45px;
-		
+		font-family: 'Playfair Display', serif;
+		font-size: 60px;
+		font-weight: bold;
+
 	}
 	&__subtitle{
-		text-align: center
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-size: 15px;
+		font-family: 'PT Sans', sans-serif;
 	}
 }
-.news__text{
-	max-height: 20vw;
-	.readmore{
-		display: block;
-		&:before{
-			content: 'Читати більше'
-		}
-	}
-	&.full-story {
-		max-height: initial;
-		.readmore{
-			&:before{
-				content: 'Згорнути'
-			}
-		}
-	}
-	@include breakpoint(tablet){
-		max-height: 10vw;
-	}
-	
-}
+
 .btn{
 	display: inline-block;
 	padding: 15px 25px;
@@ -75,7 +62,7 @@
 	@include  breakpoint(tablet){
 		display: block;
 	}
-	
+
 }
 
 .footer{
@@ -113,13 +100,13 @@
 					margin: 45px 0;
 				}
 			}
-			
+
 		}
-			
+
 		@include  breakpoint(tablet){
 			text-align: left;
 		}
-		
+
 	}
 	&__list{
 		padding: 20px 0;
@@ -135,7 +122,7 @@
 		text-decoration: none;
 		color: inherit;
 	}
-		
+
 	li{
 		margin-bottom: 15px;
 		list-style: none;
@@ -143,6 +130,110 @@
 			visibility: hidden;
 		}
 	}
-	
-}
 
+}
+.header{
+	background: black;
+	padding: 30px 20px;
+	color: #fff;
+	a{
+		color:#fff;
+		text-decoration: none;
+		&:hover{
+			color:red;
+		}
+	}
+}
+.adress{
+	font-size: 14px;
+	@include breakpoint(phablet){
+		float: left;
+	}
+}
+.phone{
+	margin-top: 12px;
+	font-size: 14px;
+	@include breakpoint(phablet){
+		float: right;
+	}
+}
+.menu{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	display: none;
+	text-align: center;
+	@include breakpoint(phablet){
+		display: block;
+		margin: 0 auto;
+	}
+	ul{
+		list-style: none;
+	}
+	li{
+		margin:20px 0;
+		@include breakpoint(phablet){
+			display: inline-block;
+			margin-right: 30px;
+		}
+	}
+}
+.bars{
+	position: absolute;
+	right:30px;
+	top:50px;
+	width:25px;
+	@include breakpoint(phablet){
+		display: none;
+	};
+}
+.bar{
+	height:3px;
+	background:#fff;
+	margin:4px 0;
+}
+.active .bar:nth-child(2){
+	opacity:0;
+}
+.active .bar:nth-child(1){
+	transform: rotate(45deg) translateY(5px) translateX(2px);
+	transition: all 1s ease;
+}
+.active .bar:nth-child(3){
+	transform: rotate(-45deg) translateY(-8px) translateX(5px);
+	transition: all 1s ease;
+}
+.bar:nth-child(2){
+	opacity:1;
+	transition: all 1s ease;
+}
+.bar{
+	transition: all 1s ease;
+}
+.call-back{
+	background: #f6f6f6;
+	border: 1px solid #919191;
+	padding: 15px;
+	form{
+		background: #f6f6f6;
+		border: 1px solid #919191;
+		padding: 40px 15px 40px 15px;
+		.form__title{
+			font-size: 26px;
+			font-family: 'Playfair Display', serif;
+		}
+		input{
+			width: 100%;
+			background: #f6f6f6;
+			max-width: 505px;
+			font-size: 18px;
+			margin-bottom: 20px;
+			color: black;
+			padding: 10px 0;
+			border: none;
+			outline: none;
+			border-bottom: 1px solid #919191;
+
+		}
+	}
+}
