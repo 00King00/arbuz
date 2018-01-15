@@ -41,6 +41,7 @@
 		font-weight: normal;
 		font-size: 15px;
 		font-family: 'PT Sans', sans-serif;
+		margin-bottom: 30px;
 	}
 }
 
@@ -136,6 +137,7 @@
 	background: black;
 	padding: 30px 20px;
 	color: #fff;
+	margin-bottom: 50px;
 	a{
 		color:#fff;
 		text-decoration: none;
@@ -144,17 +146,29 @@
 		}
 	}
 }
-.adress{
-	font-size: 14px;
+.contacts{
 	@include breakpoint(phablet){
-		float: left;
+		display: block;
+		height: 40px;
 	}
-}
-.phone{
-	margin-top: 12px;
-	font-size: 14px;
-	@include breakpoint(phablet){
-		float: right;
+		@include breakpoint(tablet){
+			display: block;
+			height: 0px;
+		}
+	&__adress{
+		font-size: 14px;
+		@include breakpoint(phablet){
+			float: left;
+		}
+	}
+	&__phone{
+		font-size: 14px;
+		@include breakpoint(phablet){
+			float: right;
+		}
+		@include breakpoint(tablet){
+			margin-top: 20px;
+		}
 	}
 }
 .menu{
@@ -236,4 +250,30 @@
 
 		}
 	}
+}
+.service{
+	text-align: center;
+	padding: 30px;
+	border: 1px solid #919191;
+	margin-bottom: 30px;
+	@include breakpoint(phablet){
+		padding: 0;
+	}
+	img{
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+	&__text{
+		padding: 30px;
+	}
+	&__name{
+		font-family: 'Playfair Display', serif;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	&__description{
+		font-family: 'PT Sans', sans-serif;
+		font-size: 18px;
+	}
+
 }
