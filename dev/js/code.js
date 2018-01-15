@@ -26,9 +26,6 @@ $(function(){
 	var api_1 = $dot_1.data("dotdotdot");
 	var api_2 = $dot_2.data("dotdotdot");
 	
-	
-	
-	
 	$dot_1.on('click', '.readmore', function( e ){
 			e.preventDefault();
 		
