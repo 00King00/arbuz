@@ -2,9 +2,59 @@ html
 	head
 		include ./parts/head.pug
 	body
+		.header
+			.wrapper
+				.bars
+					.bar
+					.bar
+					.bar
+				.adress
+					|Ежедневно: 10:00 - 22:00
+					br
+					|г. Москва, Арбат, 20
+				.phone
+					|+7 (495) 021-20-79
+				.menu
+					ul
+						a(href="#")
+							li
+								|Студия
+						a(href="#")
+							li
+								|Услуги
+						a(href="#")
+							li
+								|Специалисты
+						a(href="#")
+							li
+								|Прайс-лист
+						a(href="#")
+							li
+								|Акции
+						a(href="#")
+							li
+								|Отзывы
+						a(href="#")
+							li
+								|Контакты
 		.section
-			.section__title L'Arbuz
-				.section__subtitle Студия красоты и здоровья
+			.wrapper
+				.section__title L'Arbuz
+					.section__subtitle Студия красоты и здоровья
+					.row.clearfix
+						.col-tablet-3-4
+							img(src="/images/1.png",alt="1")
+						.col-tablet-1-4
+							.call-back
+								form
+									.form__title
+										|Заказать звонок
+									input(type='text',name='name',placeholder='Имя')
+									input(type='text',name='phone', placeholder='Телефон')
+									button.btn(type='submit')
+										|Отправить
+								
+								
 		.section
 			.about-us
 		.section
@@ -93,6 +143,6 @@ html
 						.footer__order-call
 							h1 Заказать звонок -
 							form
-								input(type='text' placeholder='Имя')
-								input(type='text' placeholder='Телефон')
+								input(type='text',name='name',placeholder='Имя')
+								input(type='text',name='phone', placeholder='Телефон')
 								input.btn(type='submit' value='Отправить')

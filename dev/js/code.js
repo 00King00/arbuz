@@ -1,4 +1,5 @@
 $(function(){
+
 	var $dot_1 = $('#news_1').dotdotdot({
 		ellipsis: "\u2026 ",
 		keep: '.readmore',
@@ -62,12 +63,16 @@ $(function(){
 		});
 	
 	
-	
+	//menu bars
+	$('.bars').click(function(){
+		$(this).toggleClass('active');
+		$(".menu").animate(
+			{height: 'toggle'},
+			{duration:300}
+	)});
 
-	
-
-	
-	
 
 	
 });
+
+	
