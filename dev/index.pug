@@ -41,32 +41,74 @@ html
 			.wrapper
 				.section__title L'Arbuz
 					.section__subtitle Студия красоты и здоровья
-					.row.clearfix
-						.col-tablet-3-4
-							img(src="/images/1.png",alt="1")
-						.col-tablet-1-4
-							.call-back
-								form
-									.form__title
-										|Заказать звонок
-									input(type='text',name='name',placeholder='Имя')
-									input(type='text',name='phone', placeholder='Телефон')
-									button.btn(type='submit')
-										|Отправить
+				.row.clearfix
+					.col-tablet-3-4
+						img(src="/images/1.png",alt="1")
+					.col-tablet-1-4
+						.call-back
+							form
+								.form__title
+									|Заказать звонок
+								input(type='text',name='name',placeholder='Имя')
+								input(type='text',name='phone', placeholder='Телефон')
+								button.btn(type='submit')
+									|Отправить
 								
 								
 		.section
 			.about-us
 		.section
 			.section__title Наши преимущества
-		.section
-			.order
+		.section.order
+			.section__title Онлайн заявка
+			.wrapper
+				.order__wrap
+					form
+						input(type='text',name='name',placeholder='Имя')
+						input(type='text',name='phone', placeholder='Телефон')
+						input(type='text' placeholder='E-mail')
+						input(type='text' placeholder='Сообщение')
+						input.btn(type='submit' value='Отправить')
+
 		.wrapper
 			.section
 				.section__title Отзиви
+				.row.clearfix
+					.col-tablet-1-2
+						.reviews
+							.reviews__quote &#8220
+							.reviews__text У меня намечалась важная встреча на которой мне хотелось блиста
+							.reviews__autor - Татьяна
+					.col-tablet-1-2
+						.reviews
+								.reviews__quote &#8220
+								.reviews__text У меня намечалась важная встреча на которой мне хотелось блиста
+								.reviews__autor - Татьяна
 			.section
 				.section__title Контакти
-			.section
+				.row.clearfix
+				.col-phablet-1-2.col-tablet-1-3
+					.border-contacts
+						.contacts__phone
+							span Телефон:
+							br
+							span +7 (495) 021-20-79
+				.col-phablet-1-2.col-tablet-1-3
+					.border-contacts
+						.contacts__adress
+							span Адрес: 
+							br
+							span г. Москва, Арбат, 20
+				.col-phablet-1-4.hide-tablet
+				.col-phablet-1-2.col-tablet-1-3
+					.border-contacts
+						.contacts__work-time
+							span Время работы:
+							br
+							span ежедневно: 10:00 - 22:00
+				
+				.section
+				.invisible invisible
 				.section__title Новости
 				.row.clearfix
 					.col-tablet-1-2.news
