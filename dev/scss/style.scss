@@ -35,6 +35,9 @@
 }
 .section{
 	margin-bottom: 110px;
+	@include breakpoint(mobileonly){
+		margin-bottom: 40px;
+	}
 	text-align: center;
 	&__title{
 		display: inline-block;
@@ -321,8 +324,30 @@
 	::-moz-placeholder          {color:white;}/* Firefox 19+ */
 	:-moz-placeholder           {color:white;}/* Firefox 18- */
 	:-ms-input-placeholder      {color:white;}
-
+	.social-icons{
+		margin-bottom: 20px;
+		float: right;
+		display: inline-block;
+		img{
+			margin-right: 20px;
+		}
+	}
 	&__order-call{
+		h1{
+			position: relative;
+			display: inline-block;
+			&:after{
+				content: "";
+				display: inline-block;
+				height: 2px;
+				width: 15px;
+				background-color:white;
+				position: absolute;
+				top:50%;
+				right: -23px;
+			}
+			
+		}
 		input{
 			width: 100%;
 			max-width: 505px;
