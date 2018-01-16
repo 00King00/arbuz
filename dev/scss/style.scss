@@ -21,7 +21,15 @@
 		max-width: 100%;
 	}
 }
-
+.invisible{
+	visibility: hidden;
+	display: none;
+	@media (min-width:750px)  and (max-width:800px){
+		height: 350px;
+		display: block;
+	}
+	
+}
 .pull-rigth{
 	float: right;
 }
@@ -63,7 +71,97 @@
 	}
 }
 
+.order{
+	color: white;
+	background-image: url(/images/3.png);
+	background-position: center;
+	padding: 70px 0;
+	background-origin:padding-box;
+
+	.section__title{
+		margin-bottom: 0px;
+		&:before,&:after{
+			background-color: white;
+		}
+		
+	}
+	&__wrap{
+		max-width: 505px;
+		margin: 0 auto;
+	}
+	
+	::-webkit-input-placeholder {color:white;}
+	::-moz-placeholder          {color:white;}/* Firefox 19+ */
+	:-moz-placeholder           {color:white;}/* Firefox 18- */
+	:-ms-input-placeholder      {color:white;}
+	input{
+			width: 100%;
+			//display: block;
+			
+			font-size: 18px;
+			margin-top: 20px;
+			background-color: transparent;
+			color: white;
+			padding: 10px 0;
+			border: none;
+			outline: none;
+			border-bottom: 2px solid white;
+			&.btn{
+				display: block;
+				margin: 45px auto ;
+				padding: 15px 25px;
+				color: white;
+				text-align: center;
+				background-color: #ba1723;
+				width: auto;
+				border: none;
+				
+			}
+
+		}
+}
+
+.reviews{
+	text-align: left;
+	background-color: #f6f6f6;
+	border: 20px solid #f6f6f6;
+	outline: 2px solid #919191;
+	padding: 40px;
+	outline-offset:-22px;
+	&__quote{
+		font-size: 107px;
+		margin-bottom: -65px;
+		margin-top: -25px;
+	}
+	
+	&__text{
+		font-size: 19px;
+		margin-bottom: 25px;
+	}
+	&__autor{
+		font-size: 24px;
+		color: #c6444d;
+		margin-top: 25px;
+	}
+}
+
+.border-contacts{
+	margin-bottom: 10px;
+	@include breakpoint(mobileonly){
+		border: 2px solid #c5c5c5;
+		padding: 35px 0 10px 0;
+	}
+	@include breakpoint(laptop){
+		border: 2px solid #c5c5c5;
+		padding: 35px 0 25px 0;
+	}
+}
 [class^='contacts__']{
+	margin-right: -30px;
+	margin-bottom: 20px;
+	display: inline-block;
+	
+	
 	span{
 		font-size: 19px;
 		&:first-child{
@@ -72,10 +170,10 @@
 	}
 	@include breakpoint(mobileonly){
 		span{
-			font-size: 12px;
+			font-size: 16px;
 			margin-right: 10px;
 			&:first-child{
-				font-size: 20px;
+				font-size: 24px;
 			}
 		}
 	}
@@ -89,7 +187,32 @@
 			position: absolute;
 			width: 50px;
 			height: 50px;
-			background-image: url(/images/phone.png)
+			background-image: url(/images/phone.png);
+			left: -74px;
+		}
+	}
+	&adress{
+		position: relative;
+		&:before{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			width: 35px;
+			height: 55px;
+			background-image: url(/images/pin.png);
+			left: -71px;
+		}
+	}
+	&work-time{
+		position: relative;
+		&:before{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			width: 47px;
+			height: 47px;
+			background-image: url(/images/clock.png);
+			left: -59px;
 		}
 	}
 }
